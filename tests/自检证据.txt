@@ -1,0 +1,170 @@
+doc-impl-parity-audit 自检证据  生成时间：2026-09-15 17:59:09
+解释器：C:/Users/26717/.workbuddy/binaries/python/envs/ai-workflow/Scripts/python.exe
+
+========== T1 py_compile ==========
+OK（退出码 0）
+
+========== T2 不可判定：路径写错，必须退出码 2（不许假绿） ==========
+[UNKNOWN] 文档或实现一侧未匹配到任何文件：doc=['no_such_*.md'] -> 0 个，impl=['scripts/doc_impl_parity.py'] -> 1 个
+退出码=2  （期望 2）
+
+========== T3 真实项目：ai-workflow v3.0.0 ==========
+文档：SKILL.md + references/{ops,adaptive-planning,capability-routing}.md
+实现：scripts/{checks,http_fetch,data_query,ai_call,office_io}.py
+=== 文档 <-> 实现 声明差集（启发式，差集须人工确认） ===
+文档：..\ai-workflow\SKILL.md, ..\ai-workflow\references\ops.md, ..\ai-workflow\references\adaptive-planning.md, ..\ai-workflow\references\capability-routing.md
+      ..\ai-workflow\SKILL.md -> 反引号 token 227，代码块 1（其中 flag 0），字符 17917
+      ..\ai-workflow\references\ops.md -> 反引号 token 639，代码块 6（其中 flag 5），字符 34628
+      ..\ai-workflow\references\adaptive-planning.md -> 反引号 token 18，代码块 4（其中 flag 0），字符 3495
+      ..\ai-workflow\references\capability-routing.md -> 反引号 token 16，代码块 6（其中 flag 0），字符 3105
+实现：..\ai-workflow\scripts\checks.py, ..\ai-workflow\scripts\http_fetch.py, ..\ai-workflow\scripts\data_query.py, ..\ai-workflow\scripts\ai_call.py, ..\ai-workflow\scripts\office_io.py
+      ..\ai-workflow\scripts\checks.py -> add_argument 15，add_parser 6，常量元组 10 个 ['TEMPLATE_FIELDS', 'PLAN_META_REQUIRED', 'PLAN_STEP_REQUIRED', 'VALID_STATUS', 'VALID_FUSE', 'VALID_CAPABILITY', 'VALID_TRIGGER', 'DECISION_KEYS', 'REVISION_KEYS', 'FUSE_SECTIONS']
+      ..\ai-workflow\scripts\http_fetch.py -> add_argument 18，add_parser 0，常量元组 5 个 ['RETRY_DELAYS', 'GITHUB_FIELDS', 'SEARCH_SORTS', 'SEARCH_COLS', 'CODE_SEARCH_COLS']
+      ..\ai-workflow\scripts\data_query.py -> add_argument 16，add_parser 4，常量元组 1 个 ['TEXT_EXTS']
+      ..\ai-workflow\scripts\ai_call.py -> add_argument 12，add_parser 0，常量元组 1 个 ['RETRY_DELAYS']
+      ..\ai-workflow\scripts\office_io.py -> add_argument 12，add_parser 6，常量元组 0 个 []
+
+[覆盖不完整] 文档引用了下列脚本，但它们未参与本轮比对：
+    _test_server.py
+    注意：上列脚本的参数会被误报成「文档写了、实现没有」——那是覆盖缺口，不是真差集。补齐 --impl 后重跑再采信。
+
+--- CLI 参数（--flag）   [置信度：高] ---
+[文档写了、实现没有] 3 项   <== 决定退出码
+    --path    <- ..\ai-workflow\references\ops.md:L273
+    --revise    <- ..\ai-workflow\references\ops.md:L171
+    --version    <- ..\ai-workflow\references\ops.md:L64, ..\ai-workflow\references\ops.md:L12
+[实现有、文档未写] 22 项  (参考；判据：文档全文不含该词)
+    --archive-days    <- ..\ai-workflow\scripts\checks.py (add_argument), ..\ai-workflow\scripts\checks.py (字面量)
+    --cwd    <- ..\ai-workflow\scripts\data_query.py (add_argument), ..\ai-workflow\scripts\data_query.py (字面量)
+    --files-only    <- ..\ai-workflow\scripts\data_query.py (add_argument), ..\ai-workflow\scripts\data_query.py (字面量)
+    --ignore-case    <- ..\ai-workflow\scripts\http_fetch.py (add_argument), ..\ai-workflow\scripts\http_fetch.py (字面量), ..\ai-workflow\scripts\data_query.py (add_argument)
+    --json    <- ..\ai-workflow\scripts\http_fetch.py (add_argument), ..\ai-workflow\scripts\http_fetch.py (字面量), ..\ai-workflow\scripts\data_query.py (add_argument)
+    --light    <- ..\ai-workflow\scripts\checks.py (add_argument), ..\ai-workflow\scripts\checks.py (字面量)
+    --max-files    <- ..\ai-workflow\scripts\data_query.py (add_argument), ..\ai-workflow\scripts\data_query.py (字面量)
+    --max-hits    <- ..\ai-workflow\scripts\data_query.py (add_argument), ..\ai-workflow\scripts\data_query.py (字面量)
+    --max-object-size    <- ..\ai-workflow\scripts\data_query.py (add_argument), ..\ai-workflow\scripts\data_query.py (字面量)
+    --max-para    <- ..\ai-workflow\scripts\office_io.py (add_argument), ..\ai-workflow\scripts\office_io.py (字面量)
+    --max-rows    <- ..\ai-workflow\scripts\data_query.py (add_argument), ..\ai-workflow\scripts\data_query.py (字面量), ..\ai-workflow\scripts\office_io.py (add_argument)
+    --max-tasks    <- ..\ai-workflow\scripts\checks.py (add_argument), ..\ai-workflow\scripts\checks.py (字面量)
+    --no-format    <- ..\ai-workflow\scripts\office_io.py (add_argument), ..\ai-workflow\scripts\office_io.py (字面量)
+    --pages    <- ..\ai-workflow\scripts\office_io.py (add_argument), ..\ai-workflow\scripts\office_io.py (字面量)
+    --pattern    <- ..\ai-workflow\scripts\data_query.py (add_argument), ..\ai-workflow\scripts\data_query.py (字面量)
+    --prompt-file    <- ..\ai-workflow\scripts\ai_call.py (add_argument), ..\ai-workflow\scripts\ai_call.py (字面量)
+    --sheet    <- ..\ai-workflow\scripts\office_io.py (add_argument), ..\ai-workflow\scripts\office_io.py (字面量)
+    --skill-dir    <- ..\ai-workflow\scripts\checks.py (add_argument), ..\ai-workflow\scripts\checks.py (字面量)
+    --timeout    <- ..\ai-workflow\scripts\http_fetch.py (add_argument), ..\ai-workflow\scripts\http_fetch.py (字面量)
+    --title    <- ..\ai-workflow\scripts\office_io.py (add_argument), ..\ai-workflow\scripts\office_io.py (字面量)
+    --widths    <- ..\ai-workflow\scripts\office_io.py (add_argument), ..\ai-workflow\scripts\office_io.py (字面量)
+    --with-line    <- ..\ai-workflow\scripts\data_query.py (add_argument), ..\ai-workflow\scripts\data_query.py (字面量)
+
+--- 子命令   [置信度：高] ---
+[文档写了、实现没有] 1 项   <== 决定退出码
+    fetch    <- ..\ai-workflow\references\ops.md:L278
+[实现有、文档未写] 2 项  (参考；判据：文档全文不含该词)
+    pdf-merge    <- ..\ai-workflow\scripts\office_io.py (add_parser)
+    word-write    <- ..\ai-workflow\scripts\office_io.py (add_parser)
+
+--- 字段名 / 枚举值（常量元组）   [置信度：低（须人工筛）] ---
+[文档写了、实现没有] 2 项   <== 决定退出码
+    体验报告    <- ..\ai-workflow\references\ops.md:L178
+    通过    <- ..\ai-workflow\SKILL.md:L120
+[参考] 另 33 项英文标识符（多为函数名/模块名/域名，非字段声明）：
+    academy.hackthebox.com    <- ..\ai-workflow\references\ops.md:L96
+    ast_grep_cli    <- ..\ai-workflow\references\ops.md:L64
+    base.parent    <- ..\ai-workflow\references\ops.md:L91
+    cmd_mark    <- ..\ai-workflow\references\ops.md:L166
+    cmd_status    <- ..\ai-workflow\references\ops.md:L179
+    console.cloud.google.com    <- ..\ai-workflow\references\ops.md:L94
+    deliverable_path    <- ..\ai-workflow\SKILL.md:L144
+    evidence_rule    <- ..\ai-workflow\SKILL.md:L144
+    ...（其余 25 项见 --json 输出）
+[实现有、文档未写] 44 项  (参考；判据：文档全文不含该词)
+    confirmed_at    <- ..\ai-workflow\scripts\checks.py (常量 TEMPLATE_FIELDS)
+    created_at    <- ..\ai-workflow\scripts\http_fetch.py (常量 GITHUB_FIELDS)
+    forks_count    <- ..\ai-workflow\scripts\http_fetch.py (常量 GITHUB_FIELDS), ..\ai-workflow\scripts\http_fetch.py (常量 SEARCH_COLS)
+    full_name    <- ..\ai-workflow\scripts\http_fetch.py (常量 GITHUB_FIELDS), ..\ai-workflow\scripts\http_fetch.py (常量 SEARCH_COLS)
+    license_spdx    <- ..\ai-workflow\scripts\http_fetch.py (常量 SEARCH_COLS)
+    open_issues_count    <- ..\ai-workflow\scripts\http_fetch.py (常量 GITHUB_FIELDS)
+    stargazers_count    <- ..\ai-workflow\scripts\http_fetch.py (常量 GITHUB_FIELDS), ..\ai-workflow\scripts\http_fetch.py (常量 SEARCH_COLS)
+    task_type    <- ..\ai-workflow\scripts\checks.py (常量 TEMPLATE_FIELDS)
+    updated_at    <- ..\ai-workflow\scripts\http_fetch.py (常量 GITHUB_FIELDS)
+    交付物总数    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    任务层级    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    你是助手    <- ..\ai-workflow\scripts\ai_call.py (中文字面量)
+    写了的是否合法    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    决策记录已追加    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    决策记录格式    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    单词字符    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    可达但需登录    <- ..\ai-workflow\scripts\http_fetch.py (中文字面量)
+    存在数    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    宋体    <- ..\ai-workflow\scripts\office_io.py (中文字面量)
+    应为列表    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    应该生成了    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    微软雅黑    <- ..\ai-workflow\scripts\office_io.py (中文字面量)
+    批量文件存在    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    批量文件行格式    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    批量文件非空    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    最后修改    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    步骤完成    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    步骤状态已更新    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    熔断报告存在    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    熔断状态合法    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    状态合法    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    缺标题    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    能力类合法    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    脚本存在    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    被反爬    <- ..\ai-workflow\scripts\http_fetch.py (中文字面量)
+    触发编号合法    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    计划修订上限    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    计划修订已追加    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    计划修订格式    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    计划对账    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    计数拒绝    <- ..\ai-workflow\scripts\http_fetch.py (中文字面量)
+    该步骤的新状态    <- ..\ai-workflow\scripts\checks.py (中文字面量)
+    输出上限    <- ..\ai-workflow\scripts\ai_call.py (中文字面量)
+    采样温度    <- ..\ai-workflow\scripts\ai_call.py (中文字面量)
+
+提示：【实现有、文档未写】是参考项 —— 文档不必穷举所有参数与内部常量（如 API 返回字段），通常无需处理。只关注其中的【工具接口契约】类（枚举值、必填字段）。
+
+结构化结果已写入：tests/t3_report.json
+
+=== 结果：文档承诺了 6 项实现里没有的东西（高置信，须逐项人工确认）===
+    另有参考项 101 项（实现有、文档未写；通常非问题）
+退出码=1  （期望 1）
+
+========== T4 阴性对照：人为埋错，必须抓到 ==========
+fixture 埋了：--ghost-flag-typo（缩进代码块内）、幽灵字段、真实字段
+=== 文档 <-> 实现 声明差集（启发式，差集须人工确认） ===
+文档：tests\fixture_doc.md
+      tests\fixture_doc.md -> 反引号 token 2，代码块 1（其中 flag 2），字符 110
+实现：tests\fixture_impl.py
+      tests\fixture_impl.py -> add_argument 2，add_parser 2，常量元组 1 个 ['VALID_STATUS']
+
+[覆盖不完整] 文档引用了下列脚本，但它们未参与本轮比对：
+    tool.py
+    注意：上列脚本的参数会被误报成「文档写了、实现没有」——那是覆盖缺口，不是真差集。补齐 --impl 后重跑再采信。
+
+--- CLI 参数（--flag）   [置信度：高] ---
+[文档写了、实现没有] 1 项   <== 决定退出码
+    --ghost-flag-typo    <- tests\fixture_doc.md:L5
+[实现有、文档未写] 1 项  (参考；判据：文档全文不含该词)
+    --impl-only-flag    <- tests\fixture_impl.py (add_argument), tests\fixture_impl.py (字面量)
+
+--- 子命令   [置信度：高] ---
+[文档写了、实现没有] 0 项   <== 决定退出码
+[实现有、文档未写] 1 项  (参考；判据：文档全文不含该词)
+    hidden-subcmd    <- tests\fixture_impl.py (add_parser)
+
+--- 字段名 / 枚举值（常量元组）   [置信度：低（须人工筛）] ---
+[文档写了、实现没有] 2 项   <== 决定退出码
+    幽灵字段    <- tests\fixture_doc.md:L8
+    真实字段    <- tests\fixture_doc.md:L8
+[实现有、文档未写] 2 项  (参考；判据：文档全文不含该词)
+    完成    <- tests\fixture_impl.py (常量 VALID_STATUS), tests\fixture_impl.py (中文字面量)
+    进行中    <- tests\fixture_impl.py (常量 VALID_STATUS), tests\fixture_impl.py (中文字面量)
+
+提示：【实现有、文档未写】是参考项 —— 文档不必穷举所有参数与内部常量（如 API 返回字段），通常无需处理。只关注其中的【工具接口契约】类（枚举值、必填字段）。
+
+=== 结果：文档承诺了 3 项实现里没有的东西（高置信，须逐项人工确认）===
+    另有参考项 4 项（实现有、文档未写；通常非问题）
+退出码=1  （期望 1）
