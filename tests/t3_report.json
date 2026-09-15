@@ -1,0 +1,260 @@
+{
+  "doc": {
+    "..\\ai-workflow\\SKILL.md": {
+      "backtick_tokens": 227,
+      "codeblocks": 1,
+      "block_flags": 0,
+      "chars": 17917
+    },
+    "..\\ai-workflow\\references\\ops.md": {
+      "backtick_tokens": 639,
+      "codeblocks": 6,
+      "block_flags": 5,
+      "chars": 34628
+    },
+    "..\\ai-workflow\\references\\adaptive-planning.md": {
+      "backtick_tokens": 18,
+      "codeblocks": 4,
+      "block_flags": 0,
+      "chars": 3495
+    },
+    "..\\ai-workflow\\references\\capability-routing.md": {
+      "backtick_tokens": 16,
+      "codeblocks": 6,
+      "block_flags": 0,
+      "chars": 3105
+    }
+  },
+  "impl": {
+    "..\\ai-workflow\\scripts\\checks.py": {
+      "add_argument": 15,
+      "add_parser": 6,
+      "upper_consts": [
+        "TEMPLATE_FIELDS",
+        "PLAN_META_REQUIRED",
+        "PLAN_STEP_REQUIRED",
+        "VALID_STATUS",
+        "VALID_FUSE",
+        "VALID_CAPABILITY",
+        "VALID_TRIGGER",
+        "DECISION_KEYS",
+        "REVISION_KEYS",
+        "FUSE_SECTIONS"
+      ],
+      "cjk_literals": 120
+    },
+    "..\\ai-workflow\\scripts\\http_fetch.py": {
+      "add_argument": 18,
+      "add_parser": 0,
+      "upper_consts": [
+        "RETRY_DELAYS",
+        "GITHUB_FIELDS",
+        "SEARCH_SORTS",
+        "SEARCH_COLS",
+        "CODE_SEARCH_COLS"
+      ],
+      "cjk_literals": 11
+    },
+    "..\\ai-workflow\\scripts\\data_query.py": {
+      "add_argument": 16,
+      "add_parser": 4,
+      "upper_consts": [
+        "TEXT_EXTS"
+      ],
+      "cjk_literals": 1
+    },
+    "..\\ai-workflow\\scripts\\ai_call.py": {
+      "add_argument": 12,
+      "add_parser": 0,
+      "upper_consts": [
+        "RETRY_DELAYS"
+      ],
+      "cjk_literals": 3
+    },
+    "..\\ai-workflow\\scripts\\office_io.py": {
+      "add_argument": 12,
+      "add_parser": 6,
+      "upper_consts": [],
+      "cjk_literals": 4
+    }
+  },
+  "coverage_gap": [
+    "_test_server.py"
+  ],
+  "buckets": {
+    "flag": {
+      "doc_only": [
+        "--path",
+        "--revise",
+        "--version"
+      ],
+      "doc_only_high": [
+        "--path",
+        "--revise",
+        "--version"
+      ],
+      "doc_only_ref": [],
+      "impl_only": [
+        "--archive-days",
+        "--cwd",
+        "--files-only",
+        "--ignore-case",
+        "--json",
+        "--light",
+        "--max-files",
+        "--max-hits",
+        "--max-object-size",
+        "--max-para",
+        "--max-rows",
+        "--max-tasks",
+        "--no-format",
+        "--pages",
+        "--pattern",
+        "--prompt-file",
+        "--sheet",
+        "--skill-dir",
+        "--timeout",
+        "--title",
+        "--widths",
+        "--with-line"
+      ]
+    },
+    "subcmd": {
+      "doc_only": [
+        "fetch"
+      ],
+      "doc_only_high": [
+        "fetch"
+      ],
+      "doc_only_ref": [],
+      "impl_only": [
+        "pdf-merge",
+        "word-write"
+      ]
+    },
+    "field": {
+      "doc_only": [
+        "academy.hackthebox.com",
+        "ast_grep_cli",
+        "base.parent",
+        "cmd_mark",
+        "cmd_status",
+        "console.cloud.google.com",
+        "deliverable_path",
+        "evidence_rule",
+        "find_spec",
+        "gh_core",
+        "gh_search",
+        "headers_extra",
+        "huggingface.co",
+        "input_paths",
+        "jina.ai",
+        "json.dumps",
+        "json.load",
+        "load_plan",
+        "node_modules",
+        "office_io",
+        "os.path.getsize",
+        "os.scandir",
+        "os.walk",
+        "py_compile",
+        "read_text",
+        "registry.npm.taobao.org",
+        "registry.npmjs.org",
+        "registry.npmmirror.com",
+        "run.font.name",
+        "sg.exe",
+        "step_id",
+        "text_matches",
+        "yaml.dump",
+        "体验报告",
+        "通过"
+      ],
+      "doc_only_high": [
+        "体验报告",
+        "通过"
+      ],
+      "doc_only_ref": [
+        "academy.hackthebox.com",
+        "ast_grep_cli",
+        "base.parent",
+        "cmd_mark",
+        "cmd_status",
+        "console.cloud.google.com",
+        "deliverable_path",
+        "evidence_rule",
+        "find_spec",
+        "gh_core",
+        "gh_search",
+        "headers_extra",
+        "huggingface.co",
+        "input_paths",
+        "jina.ai",
+        "json.dumps",
+        "json.load",
+        "load_plan",
+        "node_modules",
+        "office_io",
+        "os.path.getsize",
+        "os.scandir",
+        "os.walk",
+        "py_compile",
+        "read_text",
+        "registry.npm.taobao.org",
+        "registry.npmjs.org",
+        "registry.npmmirror.com",
+        "run.font.name",
+        "sg.exe",
+        "step_id",
+        "text_matches",
+        "yaml.dump"
+      ],
+      "impl_only": [
+        "confirmed_at",
+        "created_at",
+        "forks_count",
+        "full_name",
+        "license_spdx",
+        "open_issues_count",
+        "stargazers_count",
+        "task_type",
+        "updated_at",
+        "交付物总数",
+        "任务层级",
+        "你是助手",
+        "写了的是否合法",
+        "决策记录已追加",
+        "决策记录格式",
+        "单词字符",
+        "可达但需登录",
+        "存在数",
+        "宋体",
+        "应为列表",
+        "应该生成了",
+        "微软雅黑",
+        "批量文件存在",
+        "批量文件行格式",
+        "批量文件非空",
+        "最后修改",
+        "步骤完成",
+        "步骤状态已更新",
+        "熔断报告存在",
+        "熔断状态合法",
+        "状态合法",
+        "缺标题",
+        "能力类合法",
+        "脚本存在",
+        "被反爬",
+        "触发编号合法",
+        "计划修订上限",
+        "计划修订已追加",
+        "计划修订格式",
+        "计划对账",
+        "计数拒绝",
+        "该步骤的新状态",
+        "输出上限",
+        "采样温度"
+      ]
+    }
+  }
+}
